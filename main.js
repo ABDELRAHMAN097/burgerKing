@@ -1,4 +1,4 @@
-const products = document.querySelector(".products");
+const products = document.querySelector(".productCont");
 let items = [];
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 allProduct();
@@ -16,13 +16,14 @@ function addToCart(index) {
 function renderPro(prod) {
   prod.forEach((el, idx) => {
     products.innerHTML += `
-        <div class="card">
-              <img src="${el.thumbnail}" alt="">
-              <span>${el.title}</span>
-              <p>${el.price}</p>
-              <p>price after discound</p>
-              <button class="btn btn-primary w-100 add-to-cart" onclick="addToCart(${idx})">Add To Cart</button>
-        </div>
+    <div class="card">
+    <img src="${el.thumbnail}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">${el.title}</h5>
+      <p class="card-text">${el.price}</p>
+      <a href="#" class="by btn btn-primary" onclick="addToCart(${idx})">By</a>
+    </div>
+  </div>
         `;
   });
 }
