@@ -3,7 +3,7 @@ const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 renderPro(cart)
 function renderPro(prod) {
-  prod.forEach(el => {
+  prod.forEach((el,idx) => {
     products.innerHTML += `
     <div class="card">
     <img src="${el.thumbnail}" class="card-img-top" alt="...">
