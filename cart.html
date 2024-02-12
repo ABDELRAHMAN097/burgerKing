@@ -26,72 +26,7 @@
   </head>
   <body>
     <!-- hero section -->
-    <div class="hero">
-      <div class="col-lg-3 lift-sidebar">
-        <div class="logo">
-          <div class="icon">
-            <i class="fa-solid fa-briefcase" style="color: #ff0000"></i>
-          </div>
-          <span>SmartPos</span>
-        </div>
-        <!-- links in left sidebar -->
-        <div class="links">
-          <div class="page">
-            <a href="dashboard.html"
-              ><i class="fa-solid fa-chart-line" style="color: #747474"></i
-              >Dashboard</a
-            >
-          </div>
-          <div class="page">
-            <a href="cart.html"
-              ><i class="fa-solid fa-cart-shopping" style="color: #747474"></i
-              >cart</a
-            >
-          </div>
-          <div class="page">
-            <a href="index.html"
-              ><i class="fa-solid fa-burger" style="color: #747474"></i> Food
-              &Drinks</a
-            >
-          </div>
-          <div class="page">
-            <a href=""
-              ><i class="fa-solid fa-comments" style="color: #747474"></i>
-              Message</a
-            >
-          </div>
-          <div class="page">
-            <a href=""
-              ><i
-                class="fa-solid fa-file-invoice-dollar"
-                style="color: #747474"
-              ></i>
-              Bills</a
-            >
-          </div>
-          <div class="page">
-            <a href=""
-              ><i class="fa-solid fa-gears" style="color: #747474"></i>
-              Settings</a
-            >
-          </div>
-
-          <h3 class="page">other</h3>
-
-          <div class="page">
-            <a href=""
-              ><i class="fa-solid fa-envelope" style="color: #747474"></i>
-              Notifications</a
-            >
-          </div>
-          <div class="page">
-            <a href=""
-              ><i class="fa-solid fa-headset" style="color: #747474"></i>
-              Support</a
-            >
-          </div>
-        </div>
-      </div>
+    <div class="hero align-items-center justify-content-center">
       <div class="col-lg-9 mainContent">
         <div class="salma">
           <div class="col-lg-2">
@@ -115,17 +50,37 @@
             </div>
           </div>
         </div>
-        <div class="cartContainer">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">-</th>
-                <th scope="col">Products</th>
-                <th scope="col">Price</th>
-                <th scope="col">Total</th>
-              </tr>
-            </thead>
+        <div class="cartCont container mt-5">
+          <div class="cart-header d-flex justify-content-between align-items-center mb-4">
+            <h5 class="fw-bolder">Shoping Cart</h5>
+            <span>Remove All</span>
+          </div>
+          <table class="table w-100">
             <tbody>
+              <tr>
+
+                <td>
+                  <div class="d-flex gap-3 align-items-center">
+                    <img class="CartImg" src="https://cdn.dummyjson.com/product-images/2/thumbnail.jpg" alt="">
+                    <h4>iphone 15</h4>
+                  </div>
+                </td>
+
+                <td>
+                  <div>
+                    <span>-</span>
+                    <span>Quntety</span>
+                      <span>+</span>
+                  </div>
+                </td>
+
+                <td>
+                  <div>
+                    <span>total</span>
+                    <span>Remove</span>
+                  </div>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>

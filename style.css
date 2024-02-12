@@ -119,7 +119,16 @@ a{
     align-items: stretch;
     align-content: center;
 }
-
+.cartCont{
+    border: 1px #9394d6 solid;
+    border-radius: 11px;
+    padding: 15px;
+    margin: 5px;
+    box-shadow: 2px 4px 14px 2px #888888;
+}
+.CartImg{
+    height: 50px;
+}
 
 
 
