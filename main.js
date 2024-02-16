@@ -6,9 +6,9 @@ function addToCart(index) {
   const product = items[index];
   const obj = cart.find(ele => ele.id == product.id);
   if (obj == undefined) {
-    cart.push({...product , quntty : 1});
+    cart.push({...product , quantity : 1});
   }else{
-    obj.quntty++
+    obj.quantity++
   }
   console.log(cart);
   localStorage.setItem('cart' , JSON.stringify(cart))

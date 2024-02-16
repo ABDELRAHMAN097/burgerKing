@@ -12,7 +12,8 @@ fetch('/burger.json')
 
 
 
-
+// https://dummyjson.com/products
+//https://forkify-api.herokuapp.com/api/search?q=pizza
 
 
 
