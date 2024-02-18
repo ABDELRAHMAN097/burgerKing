@@ -98,6 +98,7 @@ a {
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: center;
+  width: 100%;
 }
 .card-title {
   font-size: 15px;
@@ -137,7 +138,7 @@ tr{
 .productCont {
   border: #2222 sold 1px;
 }
-.btn-quntty {
+.btn-quantity {
     background-color: rgb(233, 233, 233);
     cursor: pointer;
     padding: 10px;
@@ -156,6 +157,28 @@ tr{
 .price{
     color: #dc3545;
 }
+.counter{
+  margin-left: 5px;
+  
+}
+.cart-product-amount{
+  display: flex;
+  gap: 12px;
+}
+.cart-product{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-product{
+  display: flex;
+  gap: 2rem;
+  max-width: 210px;
+}
+
 
 
 

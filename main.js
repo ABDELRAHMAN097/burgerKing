@@ -1,18 +1,20 @@
 const products = document.querySelector(".productCont");
 let items = [];
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
 allProduct();
 function addToCart(index) {
   const product = items[index];
-  const obj = cart.find(ele => ele.id == product.id);
+  const obj = cart.find((ele) => ele.id == product.id);
+
   if (obj == undefined) {
-    cart.push({...product , quantity : 1});
-  }else{
-    obj.quantity++
+    cart.push({ ...product, quantity: 1 });
+  } else {      
+    obj.quantity++;
   }
+  
   console.log(cart);
-  localStorage.setItem('cart' , JSON.stringify(cart))
-};
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 function renderPro(prod) {
   prod.forEach((el, idx) => {
     products.innerHTML += `

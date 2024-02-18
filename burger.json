@@ -18,22 +18,22 @@
         "id": 3   
     },
     {
-        "name": "ًWhopper Jr",
+        "name": "Whopper Jr",
         "img": "assets/image/11.jpg",
         "price": "77.50",
         "id": 4   
     },
     {
-        "name": "Double Cheeseburger",
-        "img": "assets/image/13.webp",
-        "price": "185.50",
-        "id": 5    
+        "name": "Dbl Cheeseburger",
+        "img": "assets/image/4.jpeg",
+        "price": "77.50",
+        "id": 5   
     },
     {
         "name": "Cheeseburger",
-        "img": "assets/image/15.webp",
-        "price": "88",
-        "id": 6   
+        "img": "assets/image/19.webp",
+        "price": "185.50",
+        "id": 6    
     },
     {
         "name": "Hamburger",
