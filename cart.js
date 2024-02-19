@@ -1,14 +1,13 @@
 const products = document.querySelector("table tbody");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cats = JSON.parse(localStorage.getItem("cats")) || []
+
 const cartCont = document.querySelector('.cartCont');
 renderPro(cart);
-checkCart();
+
 console.log(cartCont)
-function checkCart(){
-  if(cart.lenght == 0){
-    cartCont.innerHTML = `<h2>mfesh haga</h2>`;
-  }
-}
+
+
 function increaseProduct(id, btn) {
   const obj = cart.find((product) => product.id == id);
   obj.quantity++;

@@ -14,6 +14,15 @@ function addToCart(index) {
   
   console.log(cart);
   localStorage.setItem("cart", JSON.stringify(cart));
+  //  sweet alert
+Swal.fire({
+  title: "تم اضافة المنتج !",
+  text: "اضغط للتخطي!",
+  icon: "success"
+});
+setTimeout(() => {
+  Swal.close();
+}, 1000);
 }
 function renderPro(prod) {
   prod.forEach((el, idx) => {
