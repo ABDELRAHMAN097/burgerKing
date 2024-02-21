@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #101522
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .batman{
+    position: absolute;
+    bottom: -111px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .batman img{
+    width: 400px;
+    opacity: 0.3;
+  }
+  @media screen and (max-width: 767px){
+    .batman img{
+      width: 200px;
+    }
+    .batman{
+      bottom: 10px;
+    }
+  }
+  #loginForm{
+    position: relative;
+    z-index: 2;
+  }
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }

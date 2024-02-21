@@ -22,7 +22,7 @@ Swal.fire({
 });
 setTimeout(() => {
   Swal.close();
-}, 1000);
+}, 2000);
 }
 function renderPro(prod) {
   prod.forEach((el, idx) => {

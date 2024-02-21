@@ -33,8 +33,15 @@ function removeproduct(id , btn){
   cart = cart.filter(product => product.id != id);
   const productElement = btn.closest('.cart-product')
   productElement.remove();
-  checkCart();
   saveCart();
+  Swal.fire({
+    title: "تم حذف المنتج !",
+    text: "اضغط للتخطي!",
+    icon: "error"
+  });
+  setTimeout(() => {
+    Swal.close();
+  }, 2000);
 }
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));

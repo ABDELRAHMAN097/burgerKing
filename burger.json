@@ -6,14 +6,14 @@
         "id": 1    
     },
     {
-        "name": "ًDouble Western",
-        "img": "assets/image/2.jpg",
-        "price": "78",
+        "name": "Double Western",
+        "img": "./assets/image/2.jpg",
+        "price": "84",
         "id": 2      
     },
     {
-        "name": "ًWhopper",
-        "img": "assets/image/9.jpg",
+        "name": "Whopper",
+        "img": "./assets/image/9.jpg",
         "price": "70",
         "id": 3   
     },
