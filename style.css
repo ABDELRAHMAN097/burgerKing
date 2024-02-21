@@ -55,8 +55,8 @@ a {
   flex-wrap: wrap;
   align-content: flex-start;
   align-items: center;
-  justify-content: center;
-  width: 66%;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 @media screen and (max-width: 767px){
   .mainContent{
@@ -75,7 +75,7 @@ a {
   align-items: center;
 }
 .salma input {
-  width: 70px;
+  width: 60px;
   border-radius: 8px;
   outline: none;
   border: 1px solid #b9b9b9;
@@ -134,6 +134,14 @@ a {
 .CartImg {
   height: 50px;
 }
+.cart-title{
+  font-size: 14px;
+}
+@media screen and (max-width: 767px){
+  .cart-title{
+    font-size: 12px;
+  }
+}
 td{
     border-bottom: none;
 }
@@ -184,6 +192,10 @@ tr{
   max-width: 210px;
 }
 /* swiper */
+.swiperCont{
+  width: 100%;
+  overflow: hidden;
+}
 .swiper-container{
   display: flex;
   flex-direction: row;
@@ -232,10 +244,6 @@ tr{
 }
 }
 /* swiper end */
-
-.ctgr{
-  
-}
 
 
 

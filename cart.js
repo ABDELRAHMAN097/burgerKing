@@ -49,11 +49,11 @@ function saveCart() {
 function renderPro(prod) {
   prod.forEach((product) => {
     products.innerHTML += `
-    <tr class="cart-product">
+    <tr class="cart-product ">
                 <td>
                   <div class="img-product">
                     <img class="CartImg" src="${product.thumbnail}"alt="product-photo">
-                    <h4>${product.title}</h4>
+                    <h4 class="cart-title">${product.title}</h4>
                   </div>
                 </td>
 
