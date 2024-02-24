@@ -32,7 +32,7 @@ function renderPro(prod) {
     <div class="card-body">
       <h5 class="card-title">${el.title}</h5>
       <p class="card-text">${el.price}</p>
-      <a href="#" class="by btn btn-primary" onclick="addToCart(${idx})">By</a>
+      <a href="#" class="by btn btn-primary" onclick="addToCart(${idx})">Buy</a>
     </div>
   </div>
         `;
@@ -45,3 +45,6 @@ function allProduct() {
     items = data.data.products;
   });
 }
+
+
+

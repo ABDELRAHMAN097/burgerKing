@@ -32,7 +32,7 @@ function renderPro(data){
     <div class="card-body">
       <h5 class="card-title">${el.name}</h5>
       <p class="card-text">${el.price}</p>
-      <a href="#" class="by btn btn-primary" onclick="addToCart(${idx})">By</a>
+      <a href="#" class="by btn btn-primary" onclick="addToCart(${idx})">Buy</a>
     </div>
   </div>
     `
