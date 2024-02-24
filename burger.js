@@ -15,7 +15,6 @@ if(obj == undefined){
  console.log(cats)
  localStorage.setItem("cats", JSON.stringify(cats));
 //  sweet alert
-
 Swal.fire({
   title: "تم اضافة المنتج !",
   text: "اضغط للتخطي!",
@@ -41,7 +40,7 @@ function renderPro(data){
 }
 // Fetch the JSON file
 function allProduct(){
-  fetch('/burger.json')
+  fetch('burger.json')
   .then(response => response.json()) // Parse the JSON response
   .then(data => {
     // Handle the data
