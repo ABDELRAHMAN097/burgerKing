@@ -1,10 +1,10 @@
 const products = document.querySelector("table tbody");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-let cats = JSON.parse(localStorage.getItem("cats")) || []
+
 
 const cartCont = document.querySelector('.cartCont');
 renderProducts(cart);
-renderPro(cats);
+
 
 console.log(cartCont)
 
@@ -19,12 +19,11 @@ function increaseProduct(id, btn) {
 }
 function decreaseProduct(id, btn) {
   const obj = cart.find((product) => product.id == id);
-  obj.quantity--;
   const parent = btn.closest(".cart-product-amount");
   const quantityElement = parent.querySelector(".quantity");
-  quantityElement.innerHTML = obj.quantity;
-  if(obj.quantity < 1){
-    quantityElement.innerHTML = 1;
+  if(obj.quantity > 1){
+    obj.quantity--;
+    quantityElement.innerHTML = obj.quantity;
   saveCart();
   }
   saveCart();

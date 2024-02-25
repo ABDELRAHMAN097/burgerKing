@@ -11,7 +11,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
       document.querySelector('#error').innerHTML = 'Invalid username or password'
     }
   });
-  
+
   function togler() {
     if (password.type === "password") {
       password.type = "text";
@@ -19,6 +19,12 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
       password.type = "password";
     }
   }
-  
-
+  let icone = document.querySelector('i');
+  // var password = document.getElementById('password').value;
+  // if(password === ""){
+  //   icone.style.display = "none";
+  // }if(password > ""){
+  //   icone.style.display = "block";
+  // }
+console.log(icone)
 

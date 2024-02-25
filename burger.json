@@ -1,73 +1,73 @@
 [
     {
-        "name": "Big King Tower",
-        "img": "assets/image/1.jpg",
+        "title": "Big King Tower",
+        "thumbnail": "assets/image/1.jpg",
         "price": "71.50",
         "id": 1    
     },
     {
-        "name": "Double Western",
-        "img": "./assets/image/2.jpg",
+        "title": "Double Western",
+        "thumbnail": "./assets/image/2.jpg",
         "price": "84",
         "id": 2      
     },
     {
-        "name": "Whopper",
-        "img": "./assets/image/9.jpg",
+        "title": "Whopper",
+        "thumbnail": "./assets/image/9.jpg",
         "price": "70",
         "id": 3   
     },
     {
-        "name": "Whopper Jr",
-        "img": "assets/image/11.jpg",
+        "title": "Whopper Jr",
+        "thumbnail": "assets/image/11.jpg",
         "price": "77.50",
         "id": 4   
     },
     {
-        "name": "Dbl Cheeseburger",
-        "img": "assets/image/4.jpeg",
+        "title": "Dbl Cheeseburger",
+        "thumbnail": "assets/image/4.jpeg",
         "price": "77.50",
         "id": 5   
     },
     {
-        "name": "Cheeseburger",
-        "img": "assets/image/19.webp",
+        "title": "Cheeseburger",
+        "thumbnail": "assets/image/19.webp",
         "price": "185.50",
         "id": 6    
     },
     {
-        "name": "Hamburger",
-        "img": "assets/image/7.webp",
+        "title": "Hamburger",
+        "thumbnail": "assets/image/7.webp",
         "price": "44.50",
         "id": 7    
     },
     {
-        "name": "Crispy Chicken",
-        "img": "assets/image/16.webp",
+        "title": "Crispy Chicken",
+        "thumbnail": "assets/image/16.webp",
         "price": "110.50",
         "id": 8    
     },
     {
-        "name": "Fish Sandwich",
-        "img": "assets/image/19.webp",
+        "title": "Fish Sandwich",
+        "thumbnail": "assets/image/19.webp",
         "price": "62",
         "id": 9    
     },
     {
-        "name": "Bacon Sandwich",
-        "img": "assets/image/21.webp",
+        "title": "Bacon Sandwich",
+        "thumbnail": "assets/image/21.webp",
         "price": "144",
         "id": 10    
     },
     {
-        "name": "Sandwich",
-        "img": "assets/image/14.webp",
+        "title": "Sandwich",
+        "thumbnail": "assets/image/14.webp",
         "price": "91",
         "id": 11    
     },
     {
-        "name": "Chicken",
-        "img": "assets/image/20.webp",
+        "title": "Chicken",
+        "thumbnail": "assets/image/20.webp",
         "price": "54.50",
         "id": 12   
     }

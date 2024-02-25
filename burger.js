@@ -1,19 +1,19 @@
 const products = document.querySelector(".productCont");
 let stor = [];
-const cats = JSON.parse(localStorage.getItem("cats")) || []
+const cart = JSON.parse(localStorage.getItem("cart")) || []
 
 
 allProduct();
 function addToCart(index){
  const product = stor[index];
- const obj = cats.find((ele) => ele.id == product.id);
+ const obj = cart.find((ele) => ele.id == product.id);
 if(obj == undefined){
-  cats.push({...product , quantity: 1 });
+  cart.push({...product , quantity: 1 });
 }else{
   obj.quantity++
 }
- console.log(cats)
- localStorage.setItem("cats", JSON.stringify(cats));
+ console.log(cart)
+ localStorage.setItem("cart", JSON.stringify(cart));
 //  sweet alert
 Swal.fire({
   title: "تم اضافة المنتج !",
@@ -28,9 +28,9 @@ function renderPro(data){
   data.forEach((el , idx) => {
     products.innerHTML += `
     <div class="card">
-    <img src="${el.img}" class="card-img-top" alt="...">
+    <img src="${el.thumbnail}" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">${el.name}</h5>
+      <h5 class="card-title">${el.title}</h5>
       <p class="card-text">${el.price}</p>
       <a href="#" class="by btn btn-primary" onclick="addToCart(${idx})">Buy</a>
     </div>
