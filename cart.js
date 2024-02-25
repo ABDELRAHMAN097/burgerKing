@@ -3,7 +3,8 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let cats = JSON.parse(localStorage.getItem("cats")) || []
 
 const cartCont = document.querySelector('.cartCont');
-renderPro(cart);
+renderProducts(cart);
+renderPro(cats);
 
 console.log(cartCont)
 
@@ -46,7 +47,7 @@ function removeproduct(id , btn){
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
-function renderPro(prod) {
+function renderProducts(prod) {
   prod.forEach((product) => {
     products.innerHTML += `
     <tr class="cart-product ">
@@ -73,5 +74,35 @@ function renderPro(prod) {
                 </td>
               </tr>
         `;
+  });
+}
+
+function renderPro(data){
+  data.forEach((el , idx) => {
+    products.innerHTML += `
+    <tr class="cart-product ">
+                <td>
+                  <div class="img-product">
+                    <img class="CartImg" src="${el.img}"alt="product-photo">
+                    <h4 class="cart-title">${el.name}</h4>
+                  </div>
+                </td>
+
+                <td class="counter">
+                  <div class="cart-product-amount">
+                    <span class="btn-quantity" onclick="decreaseProduct(${product.id} , this)">-</span>
+                    <span class="quantity">${product.quantity}</span>
+                      <span class="btn-quantity" onclick="increaseProduct(${product.id} , this)">+</span>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="column gap-3">
+                    <span class="price">$${el.price}</span>
+                    <span class="btn btn-danger" onclick="removeproduct(${product.id} , this)">Remove</span>
+                  </div>
+                </td>
+              </tr>
+    `
   });
 }

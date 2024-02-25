@@ -24,7 +24,7 @@ setTimeout(() => {
   Swal.close();
 }, 2000);
 }
-function renderPro(prod) {
+function renderProducts(prod) {
   prod.forEach((el, idx) => {
     products.innerHTML += `
     <div class="card">
@@ -41,7 +41,7 @@ function renderPro(prod) {
 
 function allProduct() {
   axios("https://dummyjson.com/products").then((data) => {
-    renderPro(data.data.products);
+    renderProducts(data.data.products);
     items = data.data.products;
   });
 }
