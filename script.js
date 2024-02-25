@@ -11,7 +11,14 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
       document.querySelector('#error').innerHTML = 'Invalid username or password'
     }
   });
-
-
+  
+  function togler() {
+    if (password.type === "password") {
+      password.type = "text";
+    } else {
+      password.type = "password";
+    }
+  }
+  
 
 

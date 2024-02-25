@@ -24,6 +24,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
   }
   .batman{
     position: absolute;
@@ -64,13 +65,21 @@ body {
   }
   
   .input-group input {
+    position: relative;
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: transparent;
+    background-color: transparent !important;
   }
-  
+  .input-group span{
+    position: absolute;
+    right: 31px;
+    top: 40px;
+  }
+  .input-group span i{
+    font-size: 22px;
+  }
   .error {
     color: red;
     margin-top: 10px;
