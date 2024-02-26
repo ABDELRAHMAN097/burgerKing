@@ -17,7 +17,7 @@ if(obj == undefined){
 //  sweet alert
 Swal.fire({
   title: "تم اضافة المنتج !",
-  text: "اضغط للتخطي!",
+  text: "!اضغط للتخطي",
   icon: "success"
 });
 setTimeout(() => {

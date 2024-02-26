@@ -36,7 +36,7 @@ function removeproduct(id , btn){
   saveCart();
   Swal.fire({
     title: "تم حذف المنتج !",
-    text: "اضغط للتخطي!",
+    text: "!اضغط للتخطي",
     icon: "error"
   });
   setTimeout(() => {
