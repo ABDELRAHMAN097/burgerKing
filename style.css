@@ -62,14 +62,22 @@ i{
   align-content: flex-start;
   align-items: center;
   justify-content: center;
-  
+  padding: 20px;
+}
+.mainfood{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
 }
 @media screen and (max-width: 767px) {
   
-  .lift-sidebar{
+  /* .lift-sidebar{
     display: none;
-  }
+  } */
   .hero {
     display: flex;
     justify-content: center !important;
@@ -88,9 +96,16 @@ i{
 }
 .salma input {
   width: 60px;
+  
   border-radius: 8px;
   outline: none;
   border: 1px solid #b9b9b9;
+}
+@media screen and (max-width: 767px){
+  .salma input {
+    width: 35px;
+    height: 17px;
+  }
 }
 .productCont {
   display: flex;
@@ -219,9 +234,15 @@ tr {
 }
 /* swiper */
 .swiperCont {
-  width: 100%;
+  width: 383px;
   overflow: hidden;
 }
+@media screen and (max-width: 767px){
+  .swiperCont {
+    width: 184px;
+  }
+}
+
 .swiper-container {
   display: flex;
   flex-direction: row;
