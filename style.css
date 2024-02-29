@@ -14,7 +14,7 @@ i{
 }
 .hero {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start !important;
   padding: 0;
 }
 .lift-sidebar {
@@ -61,12 +61,18 @@ i{
   flex-wrap: wrap;
   align-content: flex-start;
   align-items: center;
-  justify-content: flex-start;
-  overflow: hidden;
+  justify-content: center;
+  
+  padding: 20px;
 }
 @media screen and (max-width: 767px) {
-  .mainContent {
-    width: 100%;
+  
+  .lift-sidebar{
+    display: none;
+  }
+  .hero {
+    display: flex;
+    justify-content: center !important;
   }
 }
 .salma {
@@ -109,7 +115,6 @@ i{
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
 }
 .card-title {
   font-size: 15px;
@@ -118,9 +123,7 @@ i{
   font-weight: 600;
   font-size: 17px;
 }
-.card-body .by {
-  width: 80%;
-}
+
 /* cart */
 .cartContainer {
   display: flex;
@@ -147,12 +150,17 @@ i{
   .cart-title {
     font-size: 12px;
   }
+  .btn-quantity{
+    width: 10px;
+    height: 10px;
+  }
 }
 td {
   border-bottom: none;
 }
 tr {
-  border-bottom: 1px solid rgb(216, 216, 216);
+  
+  
 }
 .productCont {
   border: #2222 sold 1px;
@@ -177,11 +185,13 @@ tr {
   color: #dc3545;
 }
 .counter {
-  margin-left: 5px;
+ 
+  
 }
+
 .cart-product-amount {
   display: flex;
-  gap: 12px;
+  gap: 5px;
 }
 .cart-product {
   display: flex;
@@ -193,8 +203,19 @@ tr {
 }
 .img-product {
   display: flex;
-  gap: 2rem;
-  max-width: 210px;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 767px){
+  .btn{
+    width: 60px;
+    font-size: 10px;
+  }
+  .mainContent{
+    padding: 13px;
+    margin: auto;
+  }
 }
 /* swiper */
 .swiperCont {
@@ -244,8 +265,40 @@ tr {
     width: 100%;
     height: 60vh;
   }
-  .mainContent {
-    width: 86%;
-  }
 }
 /* swiper end */
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

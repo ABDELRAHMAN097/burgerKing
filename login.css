@@ -28,13 +28,13 @@ body {
   }
   .batman{
     position: absolute;
-    bottom: -111px;
+    top: 120px;
     left: 50%;
     transform: translate(-50%);
   }
   .batman img{
-    width: 400px;
-    opacity: 0.3;
+    width: 200px;
+    opacity: 0.7;
   }
  
   #loginForm{
@@ -49,11 +49,7 @@ body {
     .batman{
       bottom: 10px;
     }
-    /* #loginForm{
-      position: relative;
-      z-index: 2;
-      width: 300px;
-    } */
+
   }
   .input-group {
     margin-bottom: 15px;
@@ -97,3 +93,9 @@ body {
   button:hover {
     background-color: #0056b3;
   }
+  .hidden {
+    display: none;
+}
+.show{
+  display: block;
+}

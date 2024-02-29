@@ -1,13 +1,20 @@
 const products = document.querySelector("table tbody");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-
 const cartCont = document.querySelector('.cartCont');
+const price = document.querySelector('.price')
 renderProducts(cart);
-
-
+checkEmptyCart()
+function removeAll(){
+  cart = [];
+  checkEmptyCart();
+  saveCart();
+}
+function checkEmptyCart(){
+  if(cart.length == 0){
+    cartCont.innerHTML = `<h3 class='text-center'>cart is empty</h3>`
+  }
+}
 console.log(cartCont)
-
 
 function increaseProduct(id, btn) {
   const obj = cart.find((product) => product.id == id);
@@ -17,6 +24,7 @@ function increaseProduct(id, btn) {
   quantityElement.innerHTML = obj.quantity;
   saveCart();
 }
+
 function decreaseProduct(id, btn) {
   const obj = cart.find((product) => product.id == id);
   const parent = btn.closest(".cart-product-amount");
@@ -31,8 +39,9 @@ function decreaseProduct(id, btn) {
 
 function removeproduct(id , btn){
   cart = cart.filter(product => product.id != id);
-  const productElement = btn.closest('.cart-product')
+  const productElement = btn.closest('.cart-product');
   productElement.remove();
+  checkEmptyCart()
   saveCart();
   Swal.fire({
     title: "تم حذف المنتج !",
@@ -96,7 +105,7 @@ function renderPro(data){
                 </td>
 
                 <td>
-                  <div class="column gap-3">
+                  <div class="column">
                     <span class="price">$${el.price}</span>
                     <span class="btn btn-danger" onclick="removeproduct(${product.id} , this)">Remove</span>
                   </div>
