@@ -6,6 +6,13 @@
   font-family: "Outfit", sans-serif;
   font-weight: 400;
 }
+body{
+  transition: background-color 1s ease;
+}
+.dark-mood{
+  color: #bebebe;
+  
+}
 a {
   text-decoration: none;
 }
@@ -140,6 +147,18 @@ i{
 }
 
 /* cart */
+
+.hero-cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ 
+}
 .cartContainer {
   display: flex;
   flex-direction: row;
@@ -172,6 +191,7 @@ i{
 }
 td {
   border-bottom: none;
+  background-color: #040f24;
 }
 tr {
   
@@ -288,7 +308,18 @@ tr {
   }
 }
 /* swiper end */
+/* dashboard start */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.chart-container {
+  width: 400px;
+  margin: 20px;
+}
+/* dashboard end */
 
 
 

@@ -31,7 +31,7 @@
   </head>
   <body>
     <!-- hero section -->
-    <div class="hero align-items-center justify-content-center">
+    <div class="hero-cart">
        
       <div class="col-lg-10 mainContent">
         <div class="salma">
@@ -41,9 +41,8 @@
          ></a>
           </div>
           <div class="col-lg-2">
-           <div>
-             <input type="text" />
-             <i class="fa-solid fa-chevron-right" style="color: #747474"></i>
+           <div class="dark-mood" onclick="toggleDarkMood()">
+            <i class="fa-regular fa-moon"></i>
            </div>
           </div>
           <div class="col-lg-2">
@@ -56,10 +55,8 @@
            </div>
           </div>
          </div>
-        <div class="cartCont container col-12">
-          <div
-            class="cart-header d-flex justify-content-between align-items-center mb-4"
-          >
+        <div class="cartCont container col-10">
+          <div class="cart-header mb-4">
             <h5 class="fw-bolder">Shoping Cart</h5>
             <span onclick="removeAll()">Remove All</span>
           </div>
