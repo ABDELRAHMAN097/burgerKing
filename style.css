@@ -5,16 +5,15 @@
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-}
-body{
-  transition: background-color 1s ease;
-}
-.dark-mood{
-  color: #bebebe;
   
 }
+body, table td, .lift-sidebar, .card-body {
+  transition: background-color 2s ease, color 2s ease;
+}
+
 a {
   text-decoration: none;
+  color: #9c9c9c;
 }
 i{
   margin-right: 8px;
@@ -30,14 +29,19 @@ i{
   left: 0;
   align-self: flex-start;
   padding: 15px;
-  border-right: #b9b9b9 1px solid;
   height: 100vh;
 }
 @media screen and (max-width : 772px){
   .lift-sidebar{
     display: none;
   }
-}
+  }
+
+  .show-sidebar {
+    display: block;
+   }
+
+
 .logo {
   display: flex;
   gap: 6px;
@@ -88,6 +92,21 @@ i{
   justify-content: center;
   padding: 20px;
 }
+.Hide-bar{
+  display: none;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background-color: #d3d0d0;
+  width: 8px;
+  border: none;
+  outline: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-size: 40px;
+}
+
 .head-welcome{
   display: flex;
   align-items: center;
@@ -95,18 +114,28 @@ i{
   width: 100%;
   height: 350px;
 }
+@media screen and (max-width : 772px){
+  .Hide-bar{
+    display: block;
+  }
+  *{
+    width: 100%;
+  }
+}
 .head-welcome h1{
   font-size: 40px;
 }
 .image-here{
   width: 300px;
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 570px){
   .image-here{
-    width: 200px;
+    width: 180px;
   }
+}
+@media screen and (max-width: 767px){
   .head-welcome h1{
-    font-size: 25px;
+    font-size: 23px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -116,7 +145,7 @@ i{
     justify-content: center !important;
   }
 }
-.salma {
+.control {
   display: flex;
   text-align: center;
   width: 100%;
@@ -127,7 +156,7 @@ i{
   justify-content: space-around;
   align-items: center;
 }
-.salma input {
+.control input {
   width: 60px;
   
   border-radius: 8px;
@@ -135,7 +164,7 @@ i{
   border: 1px solid #b9b9b9;
 }
 @media screen and (max-width: 767px){
-  .salma input {
+  .control input {
     width: 35px;
     height: 17px;
   }
@@ -156,6 +185,7 @@ i{
   flex-wrap: nowrap;
   justify-content: center;
   align-items: baseline;
+  padding: 0;
 }
 .card-body {
   display: flex;
@@ -163,6 +193,7 @@ i{
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: center;
+  width: 100%;
 }
 .card-title {
   font-size: 15px;
@@ -173,7 +204,11 @@ i{
 }
 
 /* cart */
-
+.car-head{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 .hero-cart{
   display: flex;
   justify-content: center;
@@ -215,19 +250,23 @@ i{
     height: 10px;
   }
 }
+
+.table{
+  padding: 0 !important;
+  background-color: transparent;
+}
 td {
   border-bottom: none;
-  background-color: #040f24;
+  background-color: transparent;
 }
 tr {
-  
-  
+  background-color: transparent;
 }
 .productCont {
   border: #2222 sold 1px;
 }
 .btn-quantity {
-  background-color: rgb(233, 233, 233);
+  border: #888888 1px solid;
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
@@ -252,7 +291,7 @@ tr {
 
 .cart-product-amount {
   display: flex;
-  gap: 5px;
+  gap: 1rem;
 }
 .cart-product {
   display: flex;
@@ -264,9 +303,10 @@ tr {
 }
 .img-product {
   display: flex;
-  gap: 6px;
-  align-items: center;
-  justify-content: flex-start;
+    gap: 6px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
 }
 @media screen and (max-width: 767px){
   .btn{
@@ -274,7 +314,6 @@ tr {
     font-size: 10px;
   }
   .mainContent{
-    padding: 13px;
     margin: auto;
   }
 }
@@ -333,14 +372,21 @@ tr {
     height: 60vh;
   }
 }
+.removeAll{
+  width: 120px;
+}
 /* swiper end */
-/* dashboard start */
+
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
+@media screen and (max-width: 767px){
+  .container{
+    width: 100%;
+  }
+}
 .chart-container {
   width: 400px;
   margin: 20px;

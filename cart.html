@@ -34,31 +34,27 @@
     <div class="hero-cart">
        
       <div class="col-lg-10 mainContent">
-        <div class="salma">
+        <div class="control">
           <div class="col-lg-2">
            <a href="index.html"
            ><i class="fa-solid fa-arrow-left-long" style="color: #747474"></i
          ></a>
           </div>
           <div class="col-lg-2">
-           <div class="dark-mood" onclick="toggleDarkMood()">
+           <div onclick=" toggleDarkMood()">
             <i class="fa-regular fa-moon"></i>
            </div>
           </div>
-          <div class="col-lg-2">
-           <div>
-             <i
-               class="fa-solid fa-magnifying-glass"
-               style="color: #747474"
-             ></i>
-             <input id="serchInput" type="text" />
-           </div>
-          </div>
+         
          </div>
         <div class="cartCont container col-10">
-          <div class="cart-header mb-4">
+          <div class="car-head py-3 w-100">
             <h5 class="fw-bolder">Shoping Cart</h5>
-            <span onclick="removeAll()">Remove All</span>
+            <button class="btn btn-danger removeAll" onclick="removeAll()">Remove All</button>
+          </div>
+          <div class="cart-header mb-4">
+            
+            
           </div>
           <table class="table">
             <tbody></tbody>
@@ -87,11 +83,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <!-- <script type="module">
-      import {renderControl} from "/function.js"
-      import {sidenav} from "/function.js"
-    </script> -->
     <script src="cart.js"></script>
-    <!-- <script src="main.js"></script> -->
+    <script src="darkMode.js"></script>
   </body>
 </html>

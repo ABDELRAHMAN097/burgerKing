@@ -29,8 +29,10 @@
       </div>
       <!-- links in left sidebar -->
       <div class="links">
-        <div class="page">
-          <a href="dashboard.html"><i class="fa-solid fa-chart-line" style="color: #747474"></i>Dashboard</a>
+        <div class="page" onclick="toggleDarkMood()">
+          <div class="" onclick="toggleDarkMood()">
+            <i class="fa-regular fa-moon"></i>
+           </div>
         </div>
         <div class="page">
           <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #747474"></i>cart</a>
@@ -47,23 +49,19 @@
       </div>
     </div>
     <div class="col-lg-10 mainfood">
-      <div class="head-welcome">
-        <h1 class="text-white">WELCOME TO <span class="text-warning">BURGER KING</span></h1>
+      <div class="head-welcome"> 
+        <button class="Hide-bar" onclick="toggleSidebar()">I</button>
+        <h1 class="text-white animate__animated animate__bounce animate__repeat-7">WELCOME TO <span class="text-warning">BURGER KING</span></h1>
         <img class="image-here" src="./assets/image/image_here.png" alt="">
       </div>
-      <!-- swiper -->
-      <!-- <div class="swiperCont">
-        <div class="swiper mySwiper col-8">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="assets/image/18.webp" alt=""></div>
-            <div class="swiper-slide"><img src="assets/image/20.webp" alt=""></div>
-            <div class="swiper-slide"><img src="assets/image/17.webp" alt=""></div>
-            <div class="swiper-slide"><img src="assets/image/13.webp" alt=""></div>
-          </div> 
+      <div class="container">
+        <div class="Discount-section productCont row py-5">
+               <!-- Content comes from the (apis)-->
+            </div>
         </div>
-      </div> -->
-      <!-- <div class="swiper-container col-lg-10"></div> -->
-      <!-- swiper end -->
+      </div>
+     
+      
     </div>
   </div>
   <!-- Include SweetAlert JS -->
@@ -77,14 +75,16 @@
   <script>
     new WOW().init();
   </script>
-  <!-- Axios cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- <script type="module">
-    import {renderControl} from "/function.js"
-    import {sidenav} from "/function.js"
-  </script> -->
-  <script src="main.js"></script>
+  
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+  integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script> 
+  
   <script src="index.js"></script>
-  <!-- <script src="cart.js"></script> -->
+  <script src="darkMode.js"></script>
+  
 </body>
 </html>

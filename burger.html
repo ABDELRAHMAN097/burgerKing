@@ -22,9 +22,8 @@
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
         />
-        <!-- wow -->
-        <link rel="stylesheet" href="css/libs/animate.css" />
         <title>burger</title>
+        <link rel="stylesheet" href="css/libs/animate.css" />
         <link rel="stylesheet" href="style.css" />
       </head>
 <body>
@@ -40,10 +39,14 @@
         <!-- links in left sidebar -->
         <div class="links">
           <div class="page">
-            <a href="dashboard.html"
-              ><i class="fa-solid fa-chart-line" style="color: #747474"></i
-              >Dashboard</a
-            >
+            <a href="index.html"
+            ><i class="fa-solid fa-arrow-left-long" style="color: #747474"></i
+          ></a>
+          </div>
+          <div class="page" onclick="toggleDarkMood()">
+            <div class="dark-mood" onclick="toggleDarkMood()">
+              <i class="fa-regular fa-moon"></i>
+             </div>
           </div>
           <div class="page">
             <a href="cart.html"
@@ -70,27 +73,6 @@
         </div>
       </div>
         <div class="col-lg-9 mainContent">
-          <div class="salma">
-           <div class="col-lg-2">
-            <a href="index.html"
-            ><i class="fa-solid fa-arrow-left-long" style="color: #747474"></i
-          ></a>
-           </div>
-           <div class="col-lg-2">
-            <div class="dark-mood" onclick="toggleDarkMood()">
-              <i class="fa-regular fa-moon"></i>
-             </div>
-           </div>
-           <div class="col-lg-2">
-            <div>
-              <i
-                class="fa-solid fa-magnifying-glass"
-                style="color: #747474"
-              ></i>
-              <input id="serchInput" type="text" />
-            </div>
-           </div>
-          </div>
           <div class="productCont">
           </div>
         </div>

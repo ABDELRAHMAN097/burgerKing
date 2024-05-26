@@ -51,20 +51,9 @@ function allProduct(){
     // Handle any errors
     console.error('Error fetching the JSON file:', error);
   });
-
 }
 
-var body = document.body;
-var td = document.querySelectorAll("td")
-function toggleDarkMood (){
- body.classList.toggle('dark-mood')
- var isDarkMood = body.classList.contains("dark-mood")
- body.style.backgroundColor = isDarkMood ? "#333" : "#fff";
 
- td.classList.toggle('dark-mood');
- var isDarkMood = td.classList.contains("dark-mood")
- td.style.backgroundColor = isDarkMood ? "#333" : "#fff";
-}
 // https://dummyjson.com/products
 //https://forkify-api.herokuapp.com/api/search?q=pizza
 

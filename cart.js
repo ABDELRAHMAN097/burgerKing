@@ -77,10 +77,10 @@ function renderProducts(prod) {
   products.innerHTML = ''; // Clear existing products
   prod.forEach((product) => {
     products.innerHTML += `
-    <tr class="cart-product ">
-      <td>
+    <tr class="cart-product">
+      <td class="td">
         <div class="img-product">
-          <img class="CartImg" src="${product.thumbnail}" alt="product-photo">
+          <img class="CartImg " src="${product.thumbnail}" alt="product-photo">
           <h4 class="cart-title">${product.title}</h4>
         </div>
       </td>
@@ -93,8 +93,8 @@ function renderProducts(prod) {
         </div>
       </td>
 
-      <td>
-        <div class="column gap-3">
+      <td class="">
+        <div class="column gap-3 ">
           <span class="price">$${(product.price * product.quantity).toFixed(2)}</span>
           <span class="btn btn-danger" onclick="removeproduct(${product.id}, this)">Remove</span>
         </div>
@@ -102,37 +102,8 @@ function renderProducts(prod) {
     </tr>
     `;
   });
-}
 
-function renderPro(data) {
-  products.innerHTML = ''; // Clear existing products
-  data.forEach((el) => {
-    products.innerHTML += `
-    <tr class="cart-product ">
-      <td>
-        <div class="img-product">
-          <img class="CartImg" src="${el.img}" alt="product-photo">
-          <h4 class="cart-title">${el.name}</h4>
-        </div>
-      </td>
-
-      <td class="counter">
-        <div class="cart-product-amount">
-          <span class="btn-quantity" onclick="decreaseProduct(${el.id}, this)">-</span>
-          <span class="quantity">${el.quantity}</span>
-          <span class="btn-quantity" onclick="increaseProduct(${el.id}, this)">+</span>
-        </div>
-      </td>
-
-      <td>
-        <div class="column">
-          <span class="price">$${(el.price * el.quantity).toFixed(2)}</span>
-          <span class="btn btn-danger" onclick="removeproduct(${el.id}, this)">Remove</span>
-        </div>
-      </td>
-    </tr>
-    `;
-  });
+  applyDarkMode()
 }
 
 function toggleDarkMood() {
@@ -145,9 +116,14 @@ function toggleDarkMood() {
 function applyDarkMode() {
   const isDarkMode = JSON.parse(localStorage.getItem("darkMode"));
   body.style.backgroundColor = isDarkMode ? "#333" : "#fff";
-  td.forEach(cell => {
-    cell.classList.toggle('dark-mood', isDarkMode);
+  body.style.color = isDarkMode ? "#9c9c9c" : "#000";
+  
+  // تحديد عناصر td في الجدول
+  const tableCells = document.querySelectorAll('table td');
+
+  tableCells.forEach(cell => {
     cell.style.backgroundColor = isDarkMode ? "#333" : "#fff";
+    cell.style.color = isDarkMode ? "#9c9c9c" : "#000"; // تغيير لون النص أيضاً ليكون مناسباً
   });
 }
 
@@ -160,3 +136,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 renderProducts(cart);
 checkEmptyCart();
+
+
