@@ -144,6 +144,43 @@ i{
   left: 48px;
   z-index: 1;
 }
+@media screen and (max-width : 767px){
+  .moving{
+    position: absolute;
+    font-size: 50px;
+    top: 48px;
+    left: 200px;
+    z-index: 1;
+    width: 30px;
+  }
+  .moving-1{
+    position: absolute;
+    font-size: 50px;
+    top: 300px;
+    left: 100px;
+    z-index: 1;
+    width: 60px;
+
+  }
+  .moving-2{
+    position: absolute;
+    font-size: 50px;
+    top: 251px;
+        left: 277px;
+    z-index: 1;
+    width: 40px;
+
+  }
+  .moving-3{
+    position: absolute;
+    font-size: 50px;
+    top: 68px;
+    left: 23px;
+    z-index: 1;
+    width: 50px;
+
+  }
+}
 .hola{
   position: relative;
   z-index: 5;
@@ -164,12 +201,17 @@ i{
 }
 @media screen and (max-width: 570px){
   .image-here{
-    width: 180px;
+    width: 168px;
   }
 }
 @media screen and (max-width: 767px){
+  .head-welcome{
+    display: flex;
+    flex-direction: column;
+  }
   .head-welcome h1{
-    font-size: 23px;
+    font-size: 33px;
+    text-align: center;
   }
 }
 @media screen and (max-width: 767px) {
@@ -360,65 +402,6 @@ tr {
     margin: auto;
   }
 }
-/* swiper */
-.swiperCont {
-  width: 383px;
-  overflow: hidden;
-}
-@media screen and (max-width: 767px){
-  .swiperCont {
-    width: 184px;
-  }
-}
-
-.swiper-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-.swiper {
-  width: 100%;
-  /* height: 70vh; */
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.swiper-wrapper {
-  width: 93%;
-  /* height: 100vh; */
-}
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  /* height: 100%; */
-  object-fit: cover;
-}
-@media screen and (max-width: 767px) {
-  .swiper-slide img {
-    height: 43%;
-  }
-  .swiper {
-    width: 100%;
-    height: 60vh;
-  }
-}
-.removeAll{
-  width: 120px;
-}
-/* swiper end */
 
 .container {
   display: flex;

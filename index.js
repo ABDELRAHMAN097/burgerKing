@@ -26,7 +26,7 @@ function addToCart(index) {
 
 function renderPro(data) {
   // Discount-section
-  const lastThreeProducts = data.slice(-3);
+  const lastThreeProducts = data.slice(-4);
   lastThreeProducts.forEach((el, idx) => {
     const discountedPrice = el.price - 20;
     products.innerHTML += `
@@ -35,7 +35,11 @@ function renderPro(data) {
       <div class="card-body">
         <h5 class="card-title">${el.title}</h5>
         <div class="d-flex gap-3 align-items-center justify-content-center">
-          <p class="card-text pt-3"> ${discountedPrice} $</p>
+        <div>
+        <p class="card-text  fs-6 text-secondary" style="text-decoration: line-through;"> ${el.price}$</p>
+        <p class="card-text  fs-6"> ${discountedPrice}$</p>
+        </div>
+       
           <a href="#" class="btn btn-outline-warning" onclick="addToCart(${stor.indexOf(el)})">
             <i class="fa-solid fa-cart-shopping"></i>
           </a>
