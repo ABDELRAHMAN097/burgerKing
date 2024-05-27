@@ -26,14 +26,17 @@ setTimeout(() => {
 }
 function renderPro(data){
   data.forEach((el , idx) => {
+    const discountedPrice = el.price - 20;
     products.innerHTML += `
     <div class="card">
     <img src="${el.thumbnail}" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">${el.title}</h5>
       <div class="d-flex gap-3 align-items-center jusify-content-center ">
-      
-      <p class="card-text pt-3">${el.price}$</p>
+      <div>
+        <p class="card-text  fs-6 text-secondary" style="text-decoration: line-through;"> ${el.price}$</p>
+        <p class="card-text  fs-6"> ${discountedPrice}$</p>
+        </div>
       <a href="#" class="btn btn-outline-warning" onclick="addToCart(${idx})">
       <i class="fa-solid fa-cart-shopping"></i>
       </a>
