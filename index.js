@@ -1,4 +1,3 @@
-
 const products = document.querySelector(".productCont");
 let stor = [];
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -14,7 +13,7 @@ function addToCart(index) {
   }
   console.log(cart);
   localStorage.setItem("cart", JSON.stringify(cart));
-  //  sweet alert
+  // تنبيه حلو
   Swal.fire({
     title: "تم اضافة المنتج !",
     text: "!اضغط للتخطي",
@@ -26,14 +25,21 @@ function addToCart(index) {
 }
 
 function renderPro(data) {
-  data.forEach((el, idx) => {
+  // Discount-section
+  const lastThreeProducts = data.slice(-3);
+  lastThreeProducts.forEach((el, idx) => {
+    const discountedPrice = el.price - 20;
     products.innerHTML += `
       <div class="card">
       <img src="${el.thumbnail}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${el.title}</h5>
-        <p class="card-text">${el.price}</p>
-        <a href="#" class="by btn btn-primary" onclick="addToCart(${idx})">Buy</a>
+        <div class="d-flex gap-3 align-items-center justify-content-center">
+          <p class="card-text pt-3"> ${discountedPrice} $</p>
+          <a href="#" class="btn btn-outline-warning" onclick="addToCart(${stor.indexOf(el)})">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
       </div>
     </div>
       `;
@@ -42,14 +48,14 @@ function renderPro(data) {
 
 function allProduct() {
   fetch("burger.json")
-    .then((response) => response.json()) // Parse the JSON response
+    .then((response) => response.json()) // تحويل الاستجابة إلى JSON
     .then((data) => {
-      // Handle the data
-      renderPro(data);
+      // التعامل مع البيانات
       stor = data;
+      renderPro(data);
     })
     .catch((error) => {
-      // Handle any errors
+      // التعامل مع أي أخطاء
       console.error("Error fetching the JSON file:", error);
     });
 }

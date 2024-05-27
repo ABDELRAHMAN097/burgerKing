@@ -7,8 +7,8 @@
   font-weight: 400;
   
 }
-body, table td, .lift-sidebar, .card-body {
-  transition: background-color 2s ease, color 2s ease;
+body, table td, .lift-sidebar, .card-body .page{
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 a {
@@ -113,6 +113,40 @@ i{
   justify-content: space-around;
   width: 100%;
   height: 350px;
+  position: relative;
+  z-index: 5;
+}
+.moving{
+  position: absolute;
+  font-size: 50px;
+  top: 78px;
+    left: 655px;
+  z-index: 1;
+}
+.moving-1{
+  position: absolute;
+  font-size: 50px;
+  top: 207px;
+    left: 933px;
+  z-index: 1;
+}
+.moving-2{
+  position: absolute;
+  font-size: 50px;
+  top: 282px;
+  left: 250px;
+  z-index: 1;
+}
+.moving-3{
+  position: absolute;
+  font-size: 50px;
+  top: 29px;
+  left: 48px;
+  z-index: 1;
+}
+.hola{
+  position: relative;
+  z-index: 5;
 }
 @media screen and (max-width : 772px){
   .Hide-bar{
@@ -195,6 +229,14 @@ i{
   align-items: center;
   width: 100%;
 }
+.card-img-top {
+  transition: all 0.5s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(0.8);
+  rotate: 15deg;
+}
 .card-title {
   font-size: 15px;
 }
@@ -220,6 +262,7 @@ i{
   justify-content: space-around;
  
 }
+
 .cartContainer {
   display: flex;
   flex-direction: row;

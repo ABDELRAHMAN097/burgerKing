@@ -12,7 +12,7 @@ function applyDarkMode() {
     body.style.backgroundColor = isDarkMode ? "#333" : "#fff";
     body.style.color = isDarkMode ? "#fff" : "#000";
 
-    // حدد عناصر td و tr في الجدول
+    // تحديد عناصر td و tr في الجدول
     const tableCells = document.querySelectorAll('table td');
 
     tableCells.forEach(cell => {
@@ -24,6 +24,13 @@ function applyDarkMode() {
     const sidebar = document.querySelector('.lift-sidebar');
     sidebar.style.backgroundColor = isDarkMode ? "#333" : "#fff";
     sidebar.style.color = isDarkMode ? "#fff" : "#000";
+
+    // تغيير لون النص والخلفية في .page
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => {
+        page.style.backgroundColor = isDarkMode ? "#333" : "#fff";
+        page.style.color = isDarkMode ? "#fff" : "#000";
+    });
 
     // تغيير لون النص والخلفية في card-body
     const cardBodies = document.querySelectorAll('.card-body');

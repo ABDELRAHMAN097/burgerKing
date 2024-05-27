@@ -96,7 +96,7 @@ function renderProducts(prod) {
       <td class="">
         <div class="column gap-3 ">
           <span class="price">$${(product.price * product.quantity).toFixed(2)}</span>
-          <span class="btn btn-danger" onclick="removeproduct(${product.id}, this)">Remove</span>
+          <span class="btn btn-outline-danger" onclick="removeproduct(${product.id}, this)">Remove</span>
         </div>
       </td>
     </tr>
@@ -127,7 +127,7 @@ function applyDarkMode() {
   });
 }
 
-// تأكد من تطبيق الستايل الداكن إذا كان مفعل عند تحميل الصفحة
+
 document.addEventListener("DOMContentLoaded", () => {
   if (JSON.parse(localStorage.getItem("darkMode"))) {
     applyDarkMode();
